@@ -11,10 +11,10 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             // Geçişli arka Plan rengi
-            LinearGradient(gradient: Gradient(colors: [.blue, .white]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: Gradient(colors: [.blue, Color("lightBlue")]),
+                                 startPoint: .topLeading,
+                                 endPoint: .bottomTrailing)
+                      .edgesIgnoringSafeArea(.all)
             
             VStack {
                 Text("Pendik, IST ")
