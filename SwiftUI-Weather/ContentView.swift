@@ -40,87 +40,29 @@ struct ContentView: View {
                 
                 
                 
-                    HStack(spacing: 35) {
-                        VStack {
-                            Text("PZT")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                            
-                            Image(systemName: "cloud.sun.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            
-                            Text("25°")
-                                .font(.system(size: 28, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        
-                        VStack {
-                            Text("SL")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                            
-                            Image(systemName: "sun.max.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            
-                            Text("15°")
-                                .font(.system(size: 28, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        
-                        VStack {
-                            Text("ÇRŞ")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                            
-                            Image(systemName: "wind")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            
-                            Text("13°")
-                                .font(.system(size: 28, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        
-                        VStack {
-                            Text("PRŞ")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                            
-                            Image(systemName: "sunset.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            
-                            Text("17°")
-                                .font(.system(size: 28, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        
-                        VStack {
-                            Text("CM")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                            
-                            Image(systemName: "moon.stars.fill")
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 40, height: 40)
-                            
-                            Text("8°")
-                                .font(.system(size: 28))
-                                .foregroundColor(.white)
-                        }
-                    }
+                HStack(spacing: 20) {
+                                       // 1
+                                       WeatherDayView(dayOfWeek: "PZT",
+                                                      imageName: "cloud.sun.fill",
+                                                      temperature: 16)
+                                       // 2
+                                         WeatherDayView(dayOfWeek: "SL",
+                                                        imageName: "sun.max.fill",
+                                                        temperature: 25)
+                                       // 3
+                                        WeatherDayView(dayOfWeek: "ÇRŞ",
+                                                       imageName: "wind.snow",
+                                                       temperature: 9)
+                                       // 4
+                                           WeatherDayView(dayOfWeek: "PRŞ",
+                                                          imageName: "sunset.fill",
+                                                          temperature: 17)
+                                       // 5
+                                          WeatherDayView(dayOfWeek: "CM",
+                                                         imageName: "snow",
+                                                         temperature: 4)
+                                   }
+
                     
                 Spacer()
                     
