@@ -36,6 +36,8 @@ struct ContentView: View {
                         .font(.system(size: 70, weight: .medium))
                         .foregroundColor(.white)
                 }
+                .padding(.bottom, 40) // HStack ile aramızdaki mesafeyi ayarlıyoruz.
+
                 
                 
                 
