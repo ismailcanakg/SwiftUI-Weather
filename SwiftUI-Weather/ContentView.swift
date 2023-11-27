@@ -64,10 +64,21 @@ struct ContentView: View {
                                                          imageName: "snow",
                                                          temperature: 4)
                                    }
-
-                    
                 Spacer()
+                
+                Button(action: {
                     
+                }, label: {
+                    Text("Günü Değiştir")
+                        .font(.system(size: 20,
+                                      weight: .bold,
+                                      design: .default))
+                        .frame(width: 280, height: 50)
+                        .background(Color.white)
+                        .cornerRadius(12)
+                })
+                
+                    Spacer()
                     
                     
                 }
